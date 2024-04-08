@@ -5,6 +5,6 @@ app.get('/',(req,res)=>{
 	res.send("Epc Lab")
 })
 
-app.listen(3000,()=>{
+app.listen(8080,()=>{
 	console.log("ok")
 })
