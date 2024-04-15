@@ -1,21 +1,31 @@
 const express = require("express")
 const path = require('path');
+const bodyParser = require("body-parser")
+const session=require("express-session")
+const connection = require("./database/database")
+const User = require("./models/User")
 
 const app=express()
-const bodyParser = require("body-parser")
-//const connection = require("./database/database")
-const routes = require("./routes/routes")
-
 app.set("view engine", "ejs")
+app.use(session({
+	secret: "eraumavezumanimalmuitogrande",
+	cookie: { maxAge: 480000 },
+	resave: true,
+  	saveUninitialized: true
+}))
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, 'views'))
-
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use('/',routes)
+const usersController = require("./controllers/usersController")
+const adminController = require("./controllers/adminController")
+const homeController = require("./controllers/homeController")
 
+app.use('/',homeController)
+app.use('/',usersController)
+app.use('/',adminController)
 
 app.listen(8080,()=>{
-	console.log("servidor ok")
+	console.log("ok")
 })
