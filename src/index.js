@@ -3,9 +3,18 @@ const path = require('path');
 const bodyParser = require("body-parser")
 const session=require("express-session")
 const connection = require("./database/database")
-const User = require("./models/User")
+
+const User = require('./models/User')
+const Projetos = require("./models/Projeto")
+const Bolsas = require("./models/Bolsa")
+
+User.sync({ force: true });
+Projetos.sync({ force: true });
+Bolsas.sync({ force: true });
+
 
 const app=express()
+
 app.set("view engine", "ejs")
 app.use(session({
 	secret: "eraumavezumanimalmuitogrande",

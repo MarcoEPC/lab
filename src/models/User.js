@@ -1,21 +1,22 @@
-const Sequelize = require('sequelize')
+const { Sequelize, DataTypes } = require('sequelize')
 const connection = require('../database/database')
 
 const User = connection.define('users', {
     Nome: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull:false
     },
     Email: {
-        type: Sequelize.STRING,
-        allowNull:false
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
     },
     Password: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull:false
-    }
+    },
+}, {
+    timestamps:true
 })
 
-User.sync({force:false})
-
-module.exports=User
+module.exports = User
