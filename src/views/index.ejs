@@ -1,33 +1,38 @@
 <%- include('../partials/header.ejs') %>
 
-<body>
-    <header style="background-image: url('/images/header.jpg');">
-        <div id="container-1">
-            <div id="logo">
-                <!--Logo-->
-                <img src="#" alt="Logo" >
-            </div>
-            <button>
-                Menu
-            </button>
-            <section>
-                <div>
-                    <h1>Candidata-te às nossas Bolsas FCT</h1>
+<body class=" text-white">
+    <header style=" height:95vh; background:url('/images/header.jpg'); background-position: left center; background-size: cover; background-attachment: fixed;">
+        <div id="container-1" class="container">
+            <nav class="navbar navbar-expand-lg justify-content-between ">
+                <div id="logo" class="navbar-brand ">
+                    <!--Logo-->
+                    <img src="#" alt="Logo" >
                 </div>
-                <button>
-                    ver como
+                <button  class="btn btn-primary">
+                    Menu
                 </button>
-            </section>
+            </nav>
+                <section class="d-flex align-items-end justify-content-end  ">
+                    <div class="text-start">
+                        <h1>Candidata-te às nossas Bolsas FCT</h1>
+                    </div>
+                    <button class="btn btn-primary">
+                        ver como
+                    </button>
+                </section>
+
         </div>
     </header>
-    <main>
-        <section>
-            <div id="text-">
-                <h1>
-                    Laborátorio de <br> Comunicação, <br> Multimédia e  Informática
-                    de <br> Gestão para projectos internos e <br> externos. 
-                </h1>
-            </div>
-        </section>
+    <main class="bg-black"  style="border-top-left-radius: 65px; border-top-right-radius: 65px; margin-top: -50px;">
+        <div class="container d-inline-block p-5 align-content-md-end">
+            <section>
+                <div>
+                    <h1>
+                        Laborátorio de <br> Comunicação, <br> Multimédia e  Informática
+                        de <br> Gestão para projectos internos e <br> externos.
+                    </h1>
+                </div>
+            </section>
+        </div>
     </main>
 <%- include('../partials/footer.ejs') %>
