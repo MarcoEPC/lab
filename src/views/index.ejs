@@ -1,23 +1,17 @@
 <%- include('../partials/header.ejs') %>
 
 <body class="w-full">
-    <header class="bg-cover bg-center h-screen" style="background-image: url('images/header.png');">
-        <div class="text-3xl text-gray-100 absolute top-4 left-4">LOGO</div>
-        <button id="btnmenu" class="text-gray-100 bg-neutral-900 hover:bg-gray-100 hover:text-neutral-900 px-6 py-2 rounded-xl absolute top-4 right-4">MENU</button>
-        <div class="text-gray-100 font-bold text-2xl absolute top-28 md:right-48 right-24">Candidata-te<br> às nossas <br> bolsas de FCT<br>
-            <a href="#" class="border px-2 py-1 rounded-xl hover:bg-gray-100 hover:text-neutral-900 text-sm">Ver como</a>
+    <header class="relative h-screen">
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
+            <source src="video/video.mp4" type="video/mp4">
+        </video>
+        <%- include('../partials/menu.ejs') %>
+        <div class="text-gray-100 font-bold text-2xl absolute top-28 md:right-48 right-24">Candidata-te<br> às nossas <br>
+            bolsas de FCT<br>
+            <a href="/bolsas" class="border px-2 py-1 rounded-xl hover:bg-gray-100 hover:text-neutral-900 text-sm">Ver como</a>
         </div>
     </header>
-    <div class="w-full h-screen fixed bg-neutral-900 top-0 left-0 hidden" id="menu">
-        <div class="flex flex-col gap-6 items-center w-full h-screen pt-10">
-            <h1 class="text-gray-100 font-bold text-5xl hover:text-gray-500"><a href="#">Sobre</a></h1>
-            <h1 class="text-gray-100 font-bold text-5xl hover:text-gray-500"><a href="#">Projectos</a></h1>
-            <h1 class="text-gray-100 font-bold text-5xl hover:text-gray-500"><a href="#">Bolsas</a></h1>
-            <h1 class="text-gray-100 font-bold text-5xl hover:text-gray-500"><a href="#">Parcerias</a></h1>
-        </div>
-        <button id="btnfechar"
-            class="text-gray-100 absolute top-4 right-6 text-7xl">X</button>
-    </div>
+    <%- include('../partials/menu2.ejs') %>
     <main id="main" class="absolute bottom-0 left-0 w-full h-72 bg-neutral-900 rounded-tr-3xl rounded-tl-3xl md:p-10 pt-10 pl-5">
         <h1 class="text-gray-100 font-bold uppercase md:text-2xl text-xl">
             Laboratório de <br> Comunicação, <br> Multimédia e <br> Informática de

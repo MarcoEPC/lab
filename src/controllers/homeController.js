@@ -5,7 +5,18 @@ const router = express.Router()
 router.get('/', (req, res) => {
 	res.render('index.ejs')
 })
-
+router.get("/bolsas", (req, res) => {
+    res.render("bolsas")
+})
+router.get("/sobre", (req, res) => {
+    res.render("sobre")
+})
+router.get("/projectos", (req, res) => {
+    res.render("projectos")
+})
+router.get("/parcerias", (req, res) => {
+    res.render("parcerias")
+})
 router.get("/login", (req, res) => {
     res.render("login")
 })
