@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require("body-parser")
 const session=require("express-session")
 const connection = require("./database/database")
+const dotenvPath=path.resolve(__dirname,'../../.env')
+require('dotenv').config({ path: dotenvPath })
 
 const User = require('./models/User')
 const Projetos = require("./models/Projeto")
@@ -17,7 +19,7 @@ const app=express()
 
 app.set("view engine", "ejs")
 app.use(session({
-	secret: "eraumavezumanimalmuitogrande",
+	secret: process.env.SECRET_KEY,
 	cookie: { maxAge: 480000 },
 	resave: true,
   	saveUninitialized: true

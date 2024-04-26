@@ -1,15 +1,12 @@
 <%- include('../partials/header.ejs') %>
-    <body>
-        <div>
-            <div>
-                <div>
-                    <form action="/authenticate" method="post">
-                        <input type="email" class="form-controlo" name="email" placeholder="email@exemplo.pt"><br>
-                        <input type="password" class="form-controlo" name="password" placeholder="******"><br>
-                        <button type="submit" class="btn btn-primary">Entrar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <body class="w-full h-screen bg-gray-100 flex justify-center items-center p-6">
+        <main class="md:w-1/2 w-full bg-white rounded-md px-6 py-10 shadow-xl">
+            <form action="/authenticate" method="post">
+                <div><h1 class="uppercase font-bold text-neutral-900">Login</h1></div>
+                <input type="email" class="mt-6 border focus:outline focus:outline-neutral-500 px-4 py-2 rounded w-full" maxlength="100" name="email" placeholder="email@exemplo.pt" required autofocus><br>
+                <input type="password" class="mt-4 border focus:outline focus:outline-neutral-500 px-4 py-2 rounded w-full" maxlength="32" name="password" placeholder="******" required><br>
+                <button type="submit" class="mt-4 w-full bg-neutral-900 text-gray-100 hover:bg-gray-100 hover:text-neutral-900 font-bold px-4 py-2 rounded">Entrar</button>
+            </form>
+        </main>
     </body>
 </html>
