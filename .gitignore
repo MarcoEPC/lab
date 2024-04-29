@@ -1,4 +1,5 @@
 
+public/css
 node_modules/
 .env
 
