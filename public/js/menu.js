@@ -1,24 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const btnMenu = document.getElementById('btnmenu');
-    const btnFechar = document.getElementById('btnfechar');
-    const menu = document.getElementById('menu');
-    const main = document.querySelector('main'); // Assumindo que o elemento principal é um <main>
-
-    if (!btnMenu || !btnFechar || !menu || !main) {
-        console.error('Erro: Um ou mais elementos não foram encontrados.');
-        return;
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    let btnMenu = document.getElementById('btnmenu');
+    let btnFechar = document.getElementById('btnfechar');
+    let menu = document.getElementById('menu');
 
     function toggleMenu(isOpening) {
-        menu.style.display = isOpening ? 'block' : 'none';
+        let animationName = isOpening ? 'slideIn 0.5s' : 'slideOut 0.5s';
+        menu.style.animation = animationName;
+        menu.classList.toggle('show', isOpening);
+        menu.classList.toggle('hide', !isOpening);
         main.style.display = isOpening ? 'none' : 'block';
+        if (!isOpening) {
+            setTimeout(function () {
+                menu.style.display = 'none';
+            }, 500);
+        }
     }
 
-    btnMenu.addEventListener('click', () => {
+    btnMenu.addEventListener('click', function () {
+        menu.style.display = 'block';
         toggleMenu(true);
     });
 
-    btnFechar.addEventListener('click', () => {
+    btnFechar.addEventListener('click', function () {
         toggleMenu(false);
     });
 });
