@@ -2,8 +2,40 @@
 
     <body class="w-full">
         <%- include('../partials/menu.ejs') %>
-        <%- include('../partials/menu2.ejs') %>
-        <main class="h-screen bg-neutral-900 p-20">
-            <h1 class="text-2xl text-gray-100">Bolsas</h1>
-        </main>
-<%- include('../partials/footer.ejs') %>
+            <%- include('../partials/menu2.ejs') %>
+                <main class="h-auto w-full bg-neutral-900 p-20 flex flex-col">
+                    <div class="flex justify-center mb-20 md:text-6xl text-3xl font-bold text-gray-50">Bolsas
+                    </div>
+                    <section class="flex flex-col items-center gap-6">
+                        <article class="flex h-auto md:w-1/2 w-full rounded-md ">
+                            <div class="w-1/2"><img src="./images/bolsa1.png" alt=""></div>
+                            <div class="w-1/2 text-gray-50 px-10">
+                                <p class="mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.
+                                    Illum deleniti
+                                    sunt aliquam dignissimos laboriosam minima exercitationem provident quae error
+                                    beatae
+                                    mollitia modi, consequuntur at non est quam distinctio doloremque perspiciatis?
+                                </p>
+                                <a href="/bolsas"
+                                    class="border px-2 py-1 rounded-xl hover:bg-gray-100 hover:text-neutral-900 text-sm">Ler
+                                    mais</a>
+                            </div>
+                        </article>
+                        <article class="flex h-auto md:w-1/2 w-full rounded-md">
+                            <div class="w-1/2"><img src="./images/bolsa2.png" alt=""></div>
+                            <div class="w-1/2 text-gray-50 px-10">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                <p class="mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.
+                                    Illum deleniti
+                                    sunt aliquam dignissimos laboriosam minima exercitationem provident quae error
+                                    beatae
+                                    mollitia modi, consequuntur at non est quam distinctio doloremque perspiciatis?
+                                </p>
+                                <a href="/bolsas"
+                                    class="border px-2 py-1 rounded-xl hover:bg-gray-100 hover:text-neutral-900 text-sm">Ler
+                                    mais</a>
+                        </article>
+                    </section>
+                </main>
+                <%- include('../partials/footer.ejs') %>
