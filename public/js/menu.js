@@ -1,27 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let btnMenu = document.getElementById('btnmenu');
-    let btnFechar = document.getElementById('btnfechar');
-    let menu = document.getElementById('menu');
+    const btnMenu = document.getElementById('btnmenu');
+    const btnFechar = document.getElementById('btnfechar');
+    const menu = document.getElementById('menu');
+    const main = document.querySelector('main'); // Presumindo que o elemento principal é um <main>
 
     function toggleMenu(isOpening) {
-        let animationName = isOpening ? 'slideIn 0.5s' : 'slideOut 0.5s';
-        menu.style.animation = animationName;
-        menu.classList.toggle('show', isOpening);
-        menu.classList.toggle('hide', !isOpening);
-        main.style.display = isOpening ? 'none' : 'block';
-        if (!isOpening) {
-            setTimeout(function () {
-                menu.style.display = 'none';
-            }, 500);
+        if (isOpening) {
+            menu.style.display = 'block';
+            main.style.display = 'none';
+        } else {
+            menu.style.display = 'none';
+            main.style.display = 'block';
         }
     }
 
-    btnMenu.addEventListener('click', function () {
-        menu.style.display = 'block';
-        toggleMenu(true);
-    });
-
-    btnFechar.addEventListener('click', function () {
-        toggleMenu(false);
-    });
+    btnMenu.addEventListener('click', () => toggleMenu(true));
+    btnFechar.addEventListener('click', () => toggleMenu(false));
 });
