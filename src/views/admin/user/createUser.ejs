@@ -1,10 +1,11 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../../../partials/header.ejs') %>
+
     <body>
-        <div class="container">
+        <div class="bg-neutral-900">
             <hr>
-            <div class="card mt-5">
-                <div class="car-header">
-                    <h2>Criar Utilizador</h2>
+            <div class="bg-gray-100">
+                <div>
+                    <h2 class="font-bold text-neutral-900 text-xl">Criar Utilizador</h2>
                 </div>
                 <div class="card-body">
                     <form action="/users/create" method="post">
@@ -16,4 +17,4 @@
             </div>
         </div>
     </body>
-<%- include('../partials/footer.ejs') %>
+    <%- include('../../../partials/footer.ejs') %>
