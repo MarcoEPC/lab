@@ -4,13 +4,11 @@ const bcrypt = require("bcryptjs")
 const adminAuth = require("../middlewares/adminAuth")
 //const User=require("../models/User")
 
-router.get("/admin/users", adminAuth, (req, res) => {
-    UserActivation.findAll().then(users => {
-        res.render("admin/user/users", { users: users })
-    })
+router.get("/admin/users",/* adminAuth,*/(req, res) => {
+    res.render("admin/users")
 })
-router.get("/admin/users/create", (req, res) => {
-    res.render("admin/user/createUser")
+router.get("/admin/createUser", (req, res) => {
+    res.render("admin/createUser")
 })
 router.post("/admin/users/create", adminAuth, (req, res) => {
     var email = req.body.email

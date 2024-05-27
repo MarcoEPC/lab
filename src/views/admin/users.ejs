@@ -1,0 +1,55 @@
+<%- include('../../partials/header.ejs') %>
+
+    <body class="">
+        <div class="w-full h-14 bg-gray-900 flex justify-between p-4">
+            <div class="font-extrabold text-gray-300"><a href="dashboard"
+                    class="p-2 shadow-lg rounded-lg bg-gray-800">EPCLAB</a>
+            </div>
+            <div class="text-gray-100"><a href="">Logout</a></div>
+        </div>
+        <div class="w-full h-screen flex">
+            <%- include('../../partials/menuAdmin.ejs') %>
+                <main class="p-4">
+                    <div class="flex md:flex-row flex-col">
+                        <span class="font-bold uppercase text-gray-400 pr-2">Utilizadores </span>
+                        <span class="text-gray-400"> # Gestão </span>
+                    </div>
+                    <div class="flex pt-6 text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+                        <table>
+                            <thead>
+                                <tr class="bg-gray-700 text-gray-100">
+                                    <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50">ID</th>
+                                    <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50">Nome</th>
+                                    <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50">Email</th>
+                                    <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50">Criado em </th>
+                                    <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-1 px-4 border-b border-blue-gray-50">1</td>
+                                    <td class="py-1 px-4 border-b border-blue-gray-50">Marco</td>
+                                    <td class="py-1 px-4 border-b border-blue-gray-50">marcosilva@epcarvalhais.org</td>
+                                    <td class="py-1 px-4 border-b border-blue-gray-50">27/05/2024</td>
+                                    <td class="py-1 px-4 flex  justify-between p-4 border-b border-blue-gray-50">
+                                        <a href="" title="Alterar Palavra-passe" class="px-1"><span
+                                                class="material-symbols-outlined">
+                                                password
+                                            </span></a>
+                                        <a href="" title="Editar" class="px-1"><span class="material-symbols-outlined">
+                                                edit
+                                            </span></a>
+                                        <a href="" title="Eliminar" class="px-1"><span
+                                                class="material-symbols-outlined">
+                                                delete
+                                            </span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+        </div>
+    </body>
+
+    </html>
