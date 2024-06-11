@@ -1,15 +1,11 @@
 <%- include('../../partials/header.ejs') %>
 
-    <body>
-        <div class="w-full h-screen flex">
+    <body class="flex-1">
+        <div class="flex h-screen">
             <%- include('../../partials/menuAdmin.ejs') %>
-                <main class="w-4/5">
+                <main class="flex-1 flex flex-col">
                     <%- include('../../partials/barra.ejs') %>
-                        <div class="flex md:flex-row flex-col p-4">
-                            <span class="font-bold uppercase text-gray-400 pr-2">Bolsas </span>
-                            <span class="text-gray-400"> # Gestão </span>
-                        </div>
-                        <div class="flex pt-6 text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+                        <div class="flex-1 p-6">
                             <table>
                                 <thead>
                                     <tr class="bg-gray-700 text-gray-100">
@@ -49,6 +45,4 @@
                         </div>
                 </main>
         </div>
-    </body>
-
-    </html>
+        <%- include('../../partials/footerAdmin.ejs') %>
