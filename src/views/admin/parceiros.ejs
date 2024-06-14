@@ -6,13 +6,18 @@
                 <main class="flex-1 flex flex-col">
                     <%- include('../../partials/barra.ejs') %>
                         <div class="flex-1 p-4">
-                            <div class="flex bg-neutral-100 mb-4 p-2">
+                            <div class="flex bg-neutral-100 mb-4 p-2 shadow">
                                 <span class="font-bold uppercase text-gray-400 text-sm">Parceiros</span>
                                 <span class="font-serif text-gray-400 text-sm"> &nbsp; | Gestão </span>
                             </div>
-                            <table class="w-full">
+                            <div class="flex md:justify-end justify-start py-2">
+                                <a href="/admin/createparceiro"
+                                    class="px-2 py-2 bg-neutral-800 rounded shadow text-neutral-200 hover:bg-neutral-600 text-sm font-bold cursor-pointer">Novo
+                                    Parceiro</a>
+                            </div>
+                            <table class="w-full shadow">
                                 <thead>
-                                    <tr class="bg-neutral-700 text-neutral-200">
+                                    <tr class="bg-neutral-600 text-neutral-200">
                                         <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50 text-sm">Titulo 1
                                         </th>
                                         <th class="p-2 border-b border-blue-gray-100 bg-blue-gray-50 text-sm">Titulo 2
