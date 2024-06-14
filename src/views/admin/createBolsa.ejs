@@ -3,81 +3,102 @@
     <body class="flex-1">
         <div class="flex h-screen">
             <%- include('../../partials/menuAdmin.ejs') %>
-                <main class="flex-1 flex flex-col">
+                <main class="flex-1">
                     <%- include('../../partials/barra.ejs') %>
-                        <div class="flex-1 p-6">
+                        <div class="p-4">
+                            <div class="flex bg-neutral-100 mb-4 p-2">
+                                <span class="font-bold uppercase text-gray-400 text-sm">Bolsas</span>
+                                <span class="font-serif text-gray-400 text-sm"> &nbsp; | Inserir </span>
+                            </div>
                             <form action="" method="post">
                                 <div class="flex md:flex-row flex-col gap-4">
                                     <div class="md:w-1/2 w-full">
                                         <div class="flex flex-col">
-                                            <label for="titulo" class="text-neutral-500 py-2">Título</label>
+                                            <label for="titulo" class="text-neutral-500 py-2 text-sm">Título</label>
                                             <textarea name="titulo" class="border-b-2 focus:outline-none"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="descricao" class="text-neutral-500 py-2">Descrição</label>
-                                            <textarea name="descricao" class="border-b-2 focus:outline-none"></textarea>
+                                            <label for="descricao"
+                                                class="text-neutral-500 py-2 text-sm">Descrição</label>
+                                            <textarea name="descricao" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="area" class="text-neutral-500 py-2">Área de Atuação</label>
-                                            <textarea name="area" class="border-b-2 focus:outline-none"></textarea>
+                                            <label for="area" class="text-neutral-500 py-2 text-sm">Área de
+                                                Atuação</label>
+                                            <textarea name="area" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="objetivo" class="text-neutral-500 py-2">Objetivo do
+                                            <label for="objetivo" class="text-neutral-500 py-2 text-sm">Objetivo do
                                                 projeto</label>
-                                            <textarea name="objetivo" class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="objetivo" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="plano" class="text-neutral-500 py-2">Plano de trabalho</label>
-                                            <textarea name="plano" class="border-b-2 focus:outline-none"></textarea>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <label for="local" class="text-neutral-500 py-2">Local de trabalho</label>
-                                            <textarea name="local" class="border-b-2 focus:outline-none"></textarea>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <label for="duracao" class="text-neutral-500 py-2">Duração e regime de
+                                            <label for="plano" class="text-neutral-500 py-2 text-sm">Plano de
                                                 trabalho</label>
-                                            <textarea name="duracao" class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="plano" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <label for="local" class="text-neutral-500 py-2 text-sm">Local de
+                                                trabalho</label>
+                                            <textarea name="local" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <label for="duracao" class="text-neutral-500 py-2 text-sm">Duração e regime
+                                                de
+                                                trabalho</label>
+                                            <textarea name="duracao" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                     </div>
                                     <div class="md:w-1/2 w-full">
                                         <div class="flex flex-col">
-                                            <label for="condicoes" class="text-neutral-500 py-2">Condições da
+                                            <label for="condicoes" class="text-neutral-500 py-2 text-sm">Condições da
                                                 bolsa</label>
-                                            <textarea name="condicoes" class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="condicoes" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="criterios" class="text-neutral-500 py-2">Critérios de avaliação
+                                            <label for="criterios" class="text-neutral-500 py-2 text-sm">Critérios de
+                                                avaliação
                                                 e
                                                 formalização
                                                 da candidatura</label>
-                                            <textarea name="criterios" class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="criterios" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="composicao" class="text-neutral-500 py-2">Composição do júri de
+                                            <label for="composicao" class="text-neutral-500 py-2 text-sm">Composição do
+                                                júri de
                                                 seleção</label>
-                                            <textarea name="composicao"
-                                                class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="composicao" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="prazo" class="text-neutral-500 py-2">Prazo e receção de
+                                            <label for="prazo" class="text-neutral-500 py-2 text-sm">Prazo e receção de
                                                 candidaturas</label>
-                                            <textarea name="prazo" class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="prazo" class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="resultados" class="text-neutral-500 py-2">Publicação/notificação
+                                            <label for="resultados"
+                                                class="text-neutral-500 py-2 text-sm">Publicação/notificação
                                                 dos
                                                 resultados</label>
-                                            <textarea name="resultados" rows=4
-                                                class="border-b-2 focus:outline-none"></textarea>
+                                            <textarea name="resultados" rows=4 class="border-b-2 focus:outline-none"
+                                                maxlenght="300"></textarea>
                                         </div>
                                         <div class="flex flex-col">
-                                            <label for="imagem" class="text-neutral-500 py-2">Imagem</label>
+                                            <label for="imagem" class="text-neutral-500 py-2 text-sm">Imagem</label>
                                             <input type="file" name="imagem" class="border-b-2 focus:outline-none">
                                         </div>
                                         <div class="pt-4">
                                             <input type="submit" name="criar" value="Inserir Bolsa"
-                                                class="w-full mt-2 bg-neutral-800 hover:bg-neutral-600 px-4 py-2 rounded-xl shadow-xl text-gray-100 cursor-pointer">
+                                                class="w-full mt-2 text-sm bg-neutral-800 hover:bg-neutral-600 px-4 py-2 rounded-xl shadow-xl text-gray-100 cursor-pointer">
                                         </div>
                                     </div>
                                 </div>

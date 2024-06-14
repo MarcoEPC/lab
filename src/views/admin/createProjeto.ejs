@@ -3,32 +3,20 @@
     <body class="flex-1">
         <div class="flex h-screen">
             <%- include('../../partials/menuAdmin.ejs') %>
-                <main class="flex-1 flex flex-col">
+                <main class="flex-1">
                     <%- include('../../partials/barra.ejs') %>
-                        <div class="flex-1 p-6">
+                        <div class="p-4">
+                            <div class="flex bg-neutral-100 mb-4 p-2">
+                                <span class="font-bold uppercase text-gray-400 text-sm">Projetos</span>
+                                <span class="font-serif text-gray-400 text-sm"> &nbsp; | Inserir </span>
+                            </div>
                             <form action="" method="post" class="w-1/2">
                                 <div class="flex flex-col">
-                                    <label for="nome" class="text-neutral-500 py-2">Nome</label>
-                                    <input type="text" name="nome" autofocus class="border-b-2 focus:outline-none">
-                                </div>
-                                <div class="flex flex-col">
-                                    <label for="email" class="text-neutral-500 py-2">Email</label>
-                                    <input type="email" name="email" required class="border-b-2 focus:outline-none">
-                                </div>
-                                <div class="flex flex-col">
-                                    <label for="password" class="text-neutral-500 py-2">Palavra-Passe:</label>
-                                    <input type="password" name="password" required
-                                        class="border-b-2 focus:outline-none">
-                                </div>
-                                <div class="flex flex-col">
-                                    <label for="cpassword" class="text-neutral-500 py-2">Confirmar
-                                        Palavra-Passe:</label>
-                                    <input type="password" name="cpassword" required
-                                        class="border-b-2 focus:outline-none">
+                                    <label for="teste" class="text-neutral-500 py-2">Formulário Projeto</label>
                                 </div>
                                 <div>
                                     <input type="submit" name="criar" value="Inserir Projeto"
-                                        class="w-full mt-2 bg-neutral-800 hover:bg-neutral-600 px-4 py-2 rounded-xl shadow-xl text-gray-100 cursor-pointer">
+                                        class="w-full mt-2 text-sm bg-neutral-800 hover:bg-neutral-600 px-4 py-2 rounded-xl shadow-xl text-gray-100 cursor-pointer">
                                 </div>
                             </form>
                         </div>
