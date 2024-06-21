@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const btnMenu = document.getElementById('btnmenu');
-    const btnFechar = document.getElementById('btnfechar');
-    const menu = document.getElementById('menu');
-    const main = document.querySelector('main'); // Presumindo que o elemento principal é um <main>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('navbar-solid-bg');
 
-    function toggleMenu(isOpening) {
-        if (isOpening) {
-            menu.style.display = 'block';
-            main.style.display = 'none';
-        } else {
-            menu.style.display = 'none';
-            main.style.display = 'block';
-        }
+    if (!menuButton || !menu) {
+        console.warn('Elementos necessários não encontrados no DOM.');
+        return;
     }
 
-    btnMenu.addEventListener('click', () => toggleMenu(true));
-    btnFechar.addEventListener('click', () => toggleMenu(false));
+    menuButton.addEventListener('click', function() {
+        toggleMenuVisibility(menu);
+    });
+
+    function toggleMenuVisibility(menu) {
+        menu.classList.toggle('hidden');
+    }
 });
+
+

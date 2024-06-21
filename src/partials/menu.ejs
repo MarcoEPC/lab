@@ -1,16 +1,31 @@
-<div class="w-full absolute top-2 flex justify-center">
-    <nav class="w-11/12 bg-neutral-800 shadow-custom-glass p-3 rounded-lg mix-blend-difference">
-        <ul class="w-full flex justify-between items-center">
-            <li class="text-3xl text-white font-bold"><a href="/">LOGO</a></li>
-            <div class="flex space-x-8 text-lg text-white">
-                <li><a href="sobre" class="hover:text-gray-300">Sobre</a></li>
-                <li><a href="projetos" class="hover:text-gray-300">Projetos</a></li>
-                <li><a href="bolsas" class="hover:text-gray-300">Bolsas</a></li>
-                <li><a href="parcerias" class="hover:text-gray-300">Parcerias</a></li>
-            </div>
-        </ul>
-    </nav>
-</div>
+<nav class= "w-full bg-gray-800  rounded-b-2xl  absolute z-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-8">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse text-lg font-bold text-white">
+            LOGO
+        </a>
+        <button id="menu-button" data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 text-gray-400 dark:hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  bg-gray-800 md:bg-transparent border-gray-700">
+                <li>
+                    <a href="sobre" class="block py-2 px-3 md:p-0 text-gray-100  hover:text-blue-700 rounded md:bg-transparent ">Sobre</a>
+                </li>
+                <li>
+                    <a href="projetos" class="block py-2 px-3 md:p-0 text-gray-100  hover:text-blue-700 rounded md:bg-transparent">Projetos</a>
+                </li>
+                <li>
+                    <a href="bolsas" class="block py-2 px-3 md:p-0 text-gray-100   hover:text-blue-700 rounded md:bg-transparent">Bolsas</a>
+                </li>
+                <li>
+                    <a href="parcerias" class="block py-2 px-3 md:p-0 text-white  hover:text-blue-700 rounded md:bg-transparent">Parcerias</a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</nav>
 
   
-
