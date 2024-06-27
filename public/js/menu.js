@@ -1,19 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menu-button');
-    const menu = document.getElementById('navbar-solid-bg');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const navbar = document.getElementById('navbar-solid-bg');
 
-    if (!menuButton || !menu) {
-        console.warn('Elementos necessários não encontrados no DOM.');
-        return;
-    }
-
-    menuButton.addEventListener('click', function() {
-        toggleMenuVisibility(menu);
+    menuButton.addEventListener('click', () => {
+        navbar.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
     });
-
-    function toggleMenuVisibility(menu) {
-        menu.classList.toggle('hidden');
-    }
 });
-
 

@@ -1,20 +1,22 @@
 <%- include('../partials/header.ejs') %>
 
-<body class="w-full">
+<body class="w-full bg-customWhite text-customBlack">
     <header class="relative h-screen">
-        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
-            <source src="video/video.mp4" type="video/mp4">
-        </video>
+        <div class="fixed inset-0 z-0">
+            <video class="w-full h-full object-cover" autoplay muted loop>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+        </div>
         <%- include('../partials/menu.ejs') %>
-        <div class="text-gray-100 font-bold text-2xl absolute top-28 md:right-48 right-24">Candidata-te<br> às nossas <br>
-            bolsas de FCT<br>
-            <a href="/bolsas" class="border px-2 py-1 rounded-xl hover:bg-gray-100 hover:text-neutral-900 text-sm">Ver como</a>
+        <div class="text-customBlack font-bold text-2xl absolute top-40 md:right-48 right-24 bg-white bg-opacity-70 p-4 rounded-xl shadow-xl">
+            Candidata-te<br> às nossas <br> bolsas de FCT<br>
+            <a href="/bolsas" class="border px-2 py-1 rounded-xl text-customBlue hover:bg-gray-100 hover:text-neutral-900 text-sm mt-2 inline-block">Ver como</a>
         </div>
     </header>
-    <main id="main" class="absolute  bottom-0 left-0 w-full h-72 bg-neutral-900 rounded-tr-3xl rounded-tl-3xl md:p-10 pt-10 pl-5">
-        <h1 class="text-blue-700 font-bold uppercase md:text-2xl text-xl">
-            Laboratório de <br> Comunicação, <br> Multimédia e <br> Informática de
-            Gestão <br> para projectos <br> internos e externos.
+    <main id="main" class="relative z-10 w-full bg-customWhite rounded-tr-3xl rounded-tl-3xl  py-16 pl-5 shadow-xl -mt-20">  
+        <h1 class="text-customBlue font-bold uppercase md:text-3xl text-2xl leading-tight">
+            Laboratório de <br> Comunicação, <br> Multimédia e <br> Informática de Gestão <br> para projectos <br> internos e externos.
         </h1>
     </main>
-<%- include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %> 
+
