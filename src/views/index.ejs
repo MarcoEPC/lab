@@ -1,17 +1,23 @@
 <%- include('../partials/header.ejs') %>
 
 <body class="w-full bg-customWhite text-customBlack">
-    <header class="relative h-screen">
+    <header class="relative w-full h-screen">
         <div class="fixed inset-0 z-0">
             <video class="w-full h-full object-cover" autoplay muted loop>
                 <source src="video/video.mp4" type="video/mp4">
             </video>
         </div>
         <%- include('../partials/menu.ejs') %>
-        <div class="text-customBlack font-bold text-2xl absolute top-40 md:right-48 right-24 bg-white bg-opacity-70 p-4 rounded-xl shadow-xl">
+        <div class="text-customWhite font-bold text-2xl absolute top-40 md:right-24 right-28 bg-white bg-opacity-25 p-4 rounded-xl shadow-xl">
             Candidata-te<br> às nossas <br> bolsas de FCT<br>
-            <a href="/bolsas" class="border px-2 py-1 rounded-xl text-customBlue hover:bg-gray-100 hover:text-neutral-900 text-sm mt-2 inline-block">Ver como</a>
+            <a href="/bolsas" class="border px-2 py-1 rounded-xl text-customWhite hover:bg-customWhite hover:text-neutral-900 text-sm mt-2 inline-block">Ver como</a>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="750" height="130" viewBox="0 0 99.748 155.747" class="absolute left-1 bottom-16 md:left-1 md:bottom-24 animate-bounce">
+            <g id="Grupo_23" data-name="Grupo 23" transform="translate(-1555.126 -713.5)">
+                <path id="Caminho_218" data-name="Caminho 218" d="M1555.833,818.667,1605,867.833l49.167-49.167" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                <line id="Linha_1" data-name="Linha 1" y2="154.333" transform="translate(1605 713.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+            </g>
+        </svg>
     </header>
     <main id="main" class="relative z-10 w-full bg-customWhite rounded-tr-3xl rounded-tl-3xl  py-16 pl-5 shadow-xl -mt-20">  
         <h1 class="text-customBlue font-bold uppercase md:text-3xl text-2xl leading-tight">
