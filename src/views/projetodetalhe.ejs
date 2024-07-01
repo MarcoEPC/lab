@@ -2,9 +2,9 @@
     <body class="w-full">
         <%- include('../partials/menu.ejs') %>
             <%- include('../partials/menu2.ejs') %>
-            <main class="p-8 bg-neutral-900">
-                <section class="w-full pt-10 max-sm:pt-16 bg-neutral-900 rounded-xl overflow-hidden">
-                    <img src="./images/project_cover_001.png" alt="Imagem Principal" class="w-full">
+            <main class=" bg-slate-100 flex flex-col gap-4">
+                <section class="w-full h-2/4 flex flex-col items-center pt-28  max-sm:pt-24 bg-neutral-900 rounded-b-3xl overflow-hidden">
+                    <img src="./images/project_cover_001.png" alt="Imagem Principal" class="w-11/12 md:w-5/6">
                     <div class="p-8  md:mx-8 mx-0 flex flex-col md:flex-row gap-4 text-gray-100 shadow-inset-top">
                         <div class="flex flex-wrap h-1/6 gap-2 mb-4 w-full md:w-3/12 ">
                             <span class="bg-transparent w-auto border rounded-full px-3 py-1 text-sm text-center">3D</span>
@@ -13,8 +13,8 @@
                         </div>
                         <div class="w-full md:w-9/12">
                             <h1 class="text-4xl font-bold">Fotorealismo 3D</h1>
-                            <p class="text-xl mt-2">Beatriz Gouveia</p>
-                            <p class="mt-4 text-gray-200 line-clamp-4 md:line-clamp-none">
+                            <p class="text-xl font-semibold mt-2">Beatriz Gouveia</p>
+                            <p class="mt-4 text-gray-200 line-clamp-4 md:line-clamp-none text-justify">
                                 Projecto de autoria Beatriz Gouveia, apresenta na Prova de Aptidão profissional no ano de 2024. Este projeto corresponde à última fase do Curso Profissional em Técnico de Multimédia, a Prova de Aptidão Profissional. Esta tem como objetivo demonstrar os conhecimentos que foram adquiridos ao longo deste percurso de três anos. A área elegida para a Prova de Aptidão Profissional foi o 3D e que consistiu em criar um portfólio de imagens realistas de design de interiores e produto, para que no final pudesse criar um website e o usasse na futura procura de emprego. O tema escolhido esteve devido ao gosto pela fotografia, e sendo necessário algum material fotográfico ao qual não possuo, esta alternativa afigurou-se interessante como desafiadora.
                             </p>
                         </div>
@@ -22,21 +22,17 @@
                 </section>
                 
 
-                <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="col-span-1 md:col-span-2 flex justify-center">
-                        <img src="./images/header.png" alt="Imagem 1" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
+                <section class="w-11/12 mx-auto py-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-1 flex justify-center">
+                        <img src="./images/beatriz_project_detalhe_003.png" alt="Imagem 2" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
                     </div>
                     <div class="col-span-1 flex justify-center">
-                        <img src="./images/header.png" alt="Imagem 2" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
-                    </div>
-                    <div class="col-span-1 flex justify-center">
-                        <img src="./images/header.png" alt="Imagem 3" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
+                        <img src="./images/beatriz_project_detalhe_002.png" alt="Imagem 3" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
                     </div>
                     <div class="col-span-1 md:col-span-2 flex justify-center">
-                        <img src="./images/header.png" alt="Imagem 4" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
+                        <img src="./images/beatriz_project_detalhe_001.png" alt="Imagem 4" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-2/3">
                     </div>
                 </section>
-         
             </main>          
         </body>       
         <%- include('../partials/footer.ejs') %>
