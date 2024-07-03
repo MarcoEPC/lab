@@ -1,53 +1,77 @@
 <%- include('../partials/header.ejs') %>
 
-    <body class="w-full">
-        <%- include('../partials/menu.ejs') %>
-            <%- include('../partials/menu2.ejs') %>
-                <main class="h-auto w-full bg-neutral-900 md:p-20 p-10 flex flex-col">
-                    <div><img src="./images/header.png" class="bg-cover"></div>
-                    <section class="w-full flex md:flex-row flex-col py-10">
-                        <div class="w-1/4 p-6">
-                            <img src="./images/bolsa1.png" alt="">
-                        </div>
-                        <div class="w-3/4">
-                            <h1 class="text-gray-50 font-bold text-3xl p-2">Bolsa de Formação em Contexto de Trabalho
-                            </h1>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                                modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Área de actuação</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Objetivo do projeto</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Plano de trabalho</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Local de trabalho</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Duração e regime de atividade</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Condições da bolsa</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Critérios de avaliação e formalização de
-                                candidatura
-                            </h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Composição do júri de seleção</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Prazo e receção de candidaturas</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                            <h2 class="font-bold text-gray-50 p-2">Publicação/notificação dos resultados</h2>
-                            <p class="text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse modi
-                                recusandae vel placeat</p>
-                        </div>
-                    </section>
-                </main>
-                <%- include('../partials/footer.ejs') %>
+<body class="w-full bg-neutral-900">
+    <%- include('../partials/menu.ejs') %>
+    <%- include('../partials/menu2.ejs') %>
+    <main class="flex flex-col gap-4">
+        <section class="w-full h-2/4 bg-neutral-900 flex flex-col items-center px-3 pt-28 max-sm:pt-24 rounded-b-3xl overflow-hidden">
+            <img src="./images/bolsa_cover_002.png" alt="Imagem Principal" class="w-11/12 md:w-5/6">
+            <div class="relative bottom-36 text-customWhite sm:left-1/4 md:left-1/3 left-0 sm:text-left text-center">
+                <h1 class="font-bold text-lg sm:text-xl">Técnico(a) de Informática</h1>
+                <p class="text-base sm:text-lg md:text-xl sm:text-right text-center">Programador</p>
+            </div>
+            
+            <div class="p-4 sm:p-8 md:mx-8 mx-0 flex flex-col md:flex-row gap-4 text-gray-100 shadow-inset-top">
+                <div class="flex flex-wrap h-1/6 gap-2 mb-4 w-full md:w-3/12">
+                    <span class="bg-transparent w-auto border rounded-full px-3 py-1 text-sm text-center">Dev</span>
+                    <span class="bg-transparent w-auto border rounded-full px-3 py-1 text-sm text-center">Tecnico Informática</span>
+                </div>
+                <div class="w-full md:w-9/12">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Bolsa de Formação em Contexto de Trabalho</h1>
+                </div>
+            </div>
+        </section>
+        <section class="text-customWhite w-11/12 sm:w-3/4 mx-auto py-8 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <img src="./images/poster-concursos_004.png" alt="bolsa detalhes" class="shadow-lg w-11/12 md:w-3/4 lg:w-2/3 mx-auto">
+            </div>
+            <article class="w-full">
+                <p class="text-justify mb-4">Encontra-se aberto concurso para atribuição a Bolsa de Formação em Contexto de Trabalho - FCT - no qual o(s) aluno(s) ficaram responsáveis pelo desenvolvimento do projecto de desenvolvimento planeado em projecto para novo website da EPC.</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Área de actuação</h2>
+                <p>Desenvolvimento; Front End; Back End e Full Stack</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Objectivo de projecto</h2>
+                <p class="text-justify mb-4">Desenvolvimento de toda a estrutura do novo website da EPC, seja na sua componente de Front End, Back End como ainda de Full Stacking.</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Plano de trabalho</h2>
+                <ul class="list-decimal ml-6 mb-4">
+                    <li>Planeamento e organização de etapas</li>
+                    <li>Reuniões, estudo e sessão - conhecer processo</li>
+                    <li>Ensaios</li>
+                    <li>Fotografia e agendamento com elementos a fotografar</li>
+                    <li>Ensaios</li>
+                    <li>Edição de fotografias</li>
+                </ul>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Local de trabalho</h2>
+                <p class="text-justify mb-4">O trabalho será realizado no EPC|Lab na escola profissional de Carvalhais. Aqui dar-se-á a montagem de estúdio, do qual os ensaios e sessão terão lugar. Posteriormente todo o trabalho de edição e pós-produção terá lugar no novo laboratório.</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Duração e regime de actividade</h2>
+                <p class="text-justify mb-4">A bolsa terá a duração da FCT do ano ao qual o aluno se candidata. Presença diária.</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Condições da Bolsa</h2>
+                <p class="mb-4">Será concedido um subsídio de manutenção mensal de acordo com Artigo X, no</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Critérios de avaliação e formalização de candidatura</h2>
+                <ul class="list-decimal ml-6 mb-4">
+                    <li>Apresentação de todo o portfólio realizado, no âmbito escolar e fora deste onde este deve ser remetido na forma organizada via correio electrónico.</li>
+                    <li>Entrevista para analisar aspectos relacionados com motivação, disposição demonstrada, o empenho, a autonomia na realização de estudos dando ênfase aos aspectos relacionados com o projecto em que se insere.</li>
+                </ul>
+                <p class="text-justify mb-4">Será atribuída a cada candidato uma classificação de 0 a 20 valores em cada um aspectos acima referidos (a, b).</p>
+                <p class="text-justify mb-4">A classificação final (CF) será dada pela fórmula: CF = 0,7×A + 0,3×B</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Composição do Júri de Selecção</h2>
+                <p class="text-justify mb-4">As candidaturas serão apreciadas por um júri, constituído por:</p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Directora pedagógica;</li>
+                    <li>Director de curso;</li>
+                    <li>Coordenador de projecto;</li>
+                </ul>
+                <p class="mb-4">Suplentes:</p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Acessoria pedagógica;</li>
+                    <li>Professores/coordenadores da área de projecto;</li>
+                </ul>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Prazo e receção de candidaturas</h2>
+                <p class="text-justify mb-4">O concurso encontra-se aberto no período de 05 de Março até às 24:00 do dia 01 de Maio de 2024. As candidaturas deverão ser dirigidas à Directora Pedagógica, Professora Paula Jorge, para o e-mail: depedgogica@epecarvalhais.org</p>
+                <p class="text-justify mb-4">Deve neste e-mail estar constar a pasta com todo o portfólio ou link para descarga</p>
+                <h2 class="text-lg md:text-xl font-bold mt-4">Publicitação/notificação dos resultados</h2>
+                <p class="text-justify mb-4">Os resultados finais da avaliação serão publicados através de lista ordenada, por classificação final obtida, afixado em local visível e público na escola profissional de Carvalhais, sendo os candidatos(as) notificados(as) através de correio electrónico.</p>
+            </article>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>

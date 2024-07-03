@@ -4,40 +4,41 @@
         <%- include('../partials/menu.ejs') %>
             <%- include('../partials/menu2.ejs') %>
                 <main class="h-auto bg-neutral-900 md:p-20 p-10 flex flex-col">
-                    <div class="flex justify-center md:text-6xl text-3xl font-bold text-gray-50 md:p-20 p-10">
+                    <div class="flex justify-center md:text-6xl text-customWhite text-3xl font-bold  md:p-20 p-10">
                         Orgulho dos nossos projetos
                     </div>
-                    <section class="flex  flex-wrap gap-4 justify-center">
+                    <section class=" w-full grid md:grid-cols-2 grid-cols-1 gap-4">
                         <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 1
+                            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-lg mx-auto mt-12 group transition duration-300 hover:scale-105">
+                                <img src="./images/header.png" alt="Projeto da aluna Beatriz"  class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-20">
+                                <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-300 group-hover:opacity-10"></div>
+                                <div class="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    <h3 class="mt-3 text-3xl font-bold text-customWhite">3D</h3>
+                                    <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite">Beatriz Costa</p>
+                                </div>
                             </article>
                         </a>
                         <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 2
+                            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-lg mx-auto mt-12 group transition duration-300 hover:scale-105">
+                                <img src="./images/design_turma_2_card.png" alt="Projeto do aluno David"  class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-20">
+                                <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-300 group-hover:opacity-10"></div>
+                                <div class="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    <h3 class="mt-3 text-3xl font-bold text-customWhite">Design Grafíco</h3>
+                                    <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite"> Turma 2</p>
+                                </div>
                             </article>
                         </a>
                         <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 3
-                            </article>
-                        </a>
-                        <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 4
-                            </article>
-                        </a>
-                        <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 5
-                            </article>
-                        </a>
-                        <a href="/projetod">
-                            <article class="h-64 md:w-80 w-full min-w-72 bg-orange-500 rounded-md">
-                                Projeto 6
+                            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-lg mx-auto mt-12 group transition duration-300 hover:scale-105">
+                                <img src="./images/david_animacao_3d_card.png" alt="Projeto da Turma Multimedia 2"  class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-20">
+                                <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-300 group-hover:opacity-10"></div>
+                                <div class="relative z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    <h3 class="mt-3 text-3xl font-bold text-white">Animação 3D</h3>
+                                    <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite">David Ínacio</p>
+                                </div>
                             </article>
                         </a>
                     </section>
+                    
                 </main>
                 <%- include('../partials/footer.ejs') %>
