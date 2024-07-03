@@ -7,7 +7,7 @@
                     <%- include('../../partials/barra.ejs') %>
                         <div class="flex-1 px-4 py-2">
                             <div class="flex bg-neutral-100 mb-4 p-2 shadow">
-                                <span class="font-bold uppercase text-indigo-600 text-sm">Utilizadores</span>
+                                <span class="font-bold uppercase text-gray-500 text-sm">Utilizadores</span>
                                 <span class="font-serif text-gray-400 text-sm"> &nbsp; | Gestão </span>
                             </div>
                             <div class="flex md:justify-end justify-start mb-6">
@@ -40,18 +40,18 @@
                                         </td>
                                         <td class="p-1 border-b border-blue-gray-50 text-sm">27/05/2024</td>
                                         <td class="p-1 flex  justify-center border-b border-blue-gray-50">
-                                            <a href="" title="Alterar Palavra-passe" class="px-1"><span
+                                            <a href="/admin/editPass" title="Alterar Palavra-passe" class="px-1"><span
                                                     class="material-symbols-outlined text-white bg-indigo-800 hover:bg-indigo-500  rounded p-0.5 shadow">
                                                     password
                                                 </span></a>
-                                            <a href="" title="Editar" class="px-1"><span
+                                            <a href="/admin/editUser" title="Editar" class="px-1"><span
                                                     class="material-symbols-outlined text-white bg-orange-600 hover:bg-orange-400 rounded p-0.5 shadow">
                                                     edit
                                                 </span></a>
-                                            <a href="" title="Eliminar" class="px-1"><span
+                                            <button id="openModal" class="px-1"><span
                                                     class="material-symbols-outlined text-white bg-red-600 hover:bg-red-400 rounded p-0.5 shadow">
                                                     delete
-                                                </span></a>
+                                                </span></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -59,4 +59,39 @@
                         </div>
                 </main>
         </div>
+        <div id="myModal"
+            class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+            <div class="bg-white rounded-lg shadow-lg w-1/2 p-6 relative">
+                <span id="closeModal"
+                    class="absolute top-0 right-0 mt-4 mr-4 bg-slate-400 p-2 text-gray-500 cursor-pointer">&times;</span>
+                <h2 class="text-2xl mb-4">Eliminar</h2>
+                <p>Qualquer coisa</p>
+            </div>
+        </div>
+        <script>
+            const openModalButton = document.getElementById('openModal');
+            const closeModalButton = document.getElementById('closeModal');
+            const modal = document.getElementById('myModal');
+
+            openModalButton.addEventListener('click', () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.classList.add('opacity-100');
+            });
+
+            closeModalButton.addEventListener('click', () => {
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('pointer-events-none');
+                }, 250);
+            });
+
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.classList.add('opacity-0');
+                    setTimeout(() => {
+                        modal.classList.add('pointer-events-none');
+                    }, 250);
+                }
+            });
+        </script>
         <%- include('../../partials/footerAdmin.ejs') %>

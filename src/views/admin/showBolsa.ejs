@@ -1,0 +1,18 @@
+<%- include('../../partials/header.ejs') %>
+
+    <body class="flex-1">
+        <div class="flex h-screen">
+            <%- include('../../partials/menuAdmin.ejs') %>
+                <main class="flex-1">
+                    <%- include('../../partials/barra.ejs') %>
+                        <div class="px-4 py-2">
+                            <div class="flex bg-neutral-100 mb-4 p-2 shadow">
+                                <span class="font-bold uppercase text-indigo-600 text-sm"><a
+                                        href="/admin/bolsas">Bolsas</a></span>
+                                <span class="font-serif text-gray-400 text-sm"> &nbsp; | Ver </span>
+                            </div>
+
+                        </div>
+                </main>
+        </div>
+        <%- include('../../partials/footerAdmin.ejs') %>

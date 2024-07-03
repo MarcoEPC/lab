@@ -10,6 +10,15 @@ router.get("/admin/users",/* adminAuth,*/(req, res) => {
 router.get("/admin/createUser", (req, res) => {
     res.render("admin/createUser")
 })
+router.get("/admin/editUser", (req, res) => {
+    res.render("admin/editUser")
+})
+router.get("/admin/editPass", (req, res) => {
+    res.render("admin/editPass")
+})
+router.get("/admin/delUser", (req, res) => {
+    res.render("admin/delUser")
+})
 router.post("/admin/users/create", adminAuth, (req, res) => {
     var email = req.body.email
     var password = req.body.password
