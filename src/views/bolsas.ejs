@@ -3,20 +3,14 @@
 <body class="w-full bg-neutral-900">
     <%- include('../partials/menu.ejs') %>
     <%- include('../partials/menu2.ejs') %>
-    <main class="container mx-auto p-5 bg-neutral-900">
-        <h1 class="text-6xl font-bold text-center mt-10 mb-10 text-customWhite">Bolsas</h1>
-        <nav class="w-5/12 grid-flow-col gap-2 justify-between space-x-4 mb-10 mx-auto max-md:border border-none rounded-3xl">
-            <button class="px-3 py-1 bg-white text-black rounded-full">All</button>
-            <button class="px-3 py-1 text-customWhite  rounded-full">Comunicação</button>
-            <button class="px-3 py-1 text-customWhite  rounded-full">Multimédia</button>
-            <button class="px-3 py-1 text-customWhite  rounded-full">Informática</button>
+    <main class="container mx-auto py-14 bg-neutral-900">
+        <h1 class="md:text-6xl text-4xl py-6 text-center font-bold text-customWhite">Bolsas</h1>
+        <nav class="flex justify-center space-x-4 mb-4">
+            <button class="px-3 py-1 md:text-base text-xs bg-customWhite text-black border rounded-full">Bolsa Interna</button>
+            <button class="px-3 py-1 md:text-base text-xs text-customWhite border rounded-full">Bolsa Externa</button>
         </nav>
-        <nav class="flex justify-center space-x-4 mb-10">
-            <button class="px-3 py-1 bg-customWhite text-black border rounded-full">Bolsa Interna</button>
-            <button class="px-3 py-1 text-customWhite border rounded-full">Bolsa Externa</button>
-        </nav>
-        <div class="space-y-10 w-full md:w-2/3 mx-auto">
-            <article class="flex flex-col md:flex-row items-center gap-2  p-5">
+        <div class="w-full md:w-2/3 mx-auto">
+            <article class="flex flex-col md:flex-row gap-2  p-5">
                 <div class="md:w-1/2">
                     <img src="./images/bolsa1.png" alt="Bolsa 1" class="w-10/12">
                 </div>
