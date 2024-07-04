@@ -1,26 +1,29 @@
 <%- include('../partials/header.ejs') %>
 
-<body class="w-full bg-neutral-900">
+<body class="w-full">
     <%- include('../partials/menu.ejs') %>
     <%- include('../partials/menu2.ejs') %>
-    <main class="container mx-auto py-14 bg-neutral-900">
-        <h1 class="md:text-6xl text-4xl py-6 text-center font-bold text-customWhite">Bolsas</h1>
-        <nav class="flex justify-center space-x-4 mb-4">
-            <button class="px-3 py-1 md:text-base text-xs bg-customWhite text-black border rounded-full">Bolsa Interna</button>
-            <button class="px-3 py-1 md:text-base text-xs text-customWhite border rounded-full">Bolsa Externa</button>
-        </nav>
-        <div class="w-full md:w-2/3 mx-auto">
-            <article class="flex flex-col md:flex-row gap-2  p-5">
-                <div class="md:w-1/2">
-                    <img src="./images/bolsa1.png" alt="Bolsa 1" class="w-10/12">
-                </div>
-                <div class="md:w-3/4 h-full">
-                    <p class="mb-6 text-justify text-customWhite">Encontra-se aberto concurso para atribuição a Bolsa de Formação em Contexto de Trabalho - FCT - no qual o aluno ficará responsável pelo desenvolvimento de projecto de fotografia planeado em projecto para novo website da EPC. Pretende-se que o aluno desenvolva fotografia retrato, do qual irá adquirir conhecimento específico de todo o processo à realização, produção e edição. O trabalho será desenvolvido no EPC|LAB, localizado na escola profissional de Carvalhais, sob coordenação do Professor Márcio Silva.</p>
+    <main class="bg-slate-100 flex flex-col gap-4">
+        <section class="w-full flex flex-col items-center pt-28 pb-5 max-sm:pt-24 bg-neutral-900 overflow-hidden">
+            <div class="flex justify-center md:mb-20 mb-10">
+                <h1 class="md:text-6xl text-3xl font-bold text-customWhite">Bolsas</h1>
+            </div>
+            <nav class="flex justify-center space-x-4 mb-4">
+                <button class="px-3 py-1 md:text-base text-xs bg-customWhite text-black border rounded-full">Bolsa Interna</button>
+                <button class="px-3 py-1 md:text-base text-xs text-customWhite border rounded-full">Bolsa Externa</button>
+            </nav>
+            <section class="flex md:flex-row flex-col w-5/6 gap-5 py-7">
+                <article class="md:w-1/2 w-full flex justify-center md:mb-0 mb-4">
+                    <img src="./images/bolsa1.png" alt="Bolsa 1" class="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 hover:shadow-xl w-10/12">
+                </article>
+                <article class="md:w-3/4 w-full">
+                    <p class="text-gray-50 text-justify leading-relaxed transition-opacity duration-500 hover:opacity-75 mb-6">
+                        Encontra-se aberto concurso para atribuição a Bolsa de Formação em Contexto de Trabalho - FCT - no qual o aluno ficará responsável pelo desenvolvimento de projecto de fotografia planeado em projecto para novo website da EPC. Pretende-se que o aluno desenvolva fotografia retrato, do qual irá adquirir conhecimento específico de todo o processo à realização, produção e edição. O trabalho será desenvolvido no EPC|LAB, localizado na escola profissional de Carvalhais, sob coordenação do Professor Márcio Silva.
+                    </p>
                     <a href="/bolsad" class="px-2 py-1 border rounded-xl text-customWhite hover:bg-customWhite hover:text-neutral-900 text-sm mt-2 inline-block">Ler mais</a>
-                </div>
-            </article>
-        
-        </div>
+                </article>
+            </section>
+        </section>
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>
