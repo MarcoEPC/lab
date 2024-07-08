@@ -1,32 +1,46 @@
 <%- include('../partials/header.ejs') %>
 
-    <body class="w-full">
-        <%- include('../partials/menu.ejs') %>
-            <%- include('../partials/menu2.ejs') %>
-                <main class="h-auto bg-neutral-900 md:p-20 p-10 flex flex-col">
-                    <div class="flex justify-center md:text-6xl text-3xl font-bold text-blue-700 md:p-20 p-10">
-                        Parcerias
-                    </div>
-                    <section class="flex flex-wrap gap-4 justify-center">
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 1
-                        </article>
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 2
-                        </article>
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 3
-                        </article>
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 4
-                        </article>
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 5
-                        </article>
-                        <article class="h-64 md:w-80 w-full border border-gray-100 text-gray-50 rounded-md">
-                            Parceria 6
-                        </article>
-
-                    </section>
-                </main>
-                <%- include('../partials/footer.ejs') %>
+<body class="w-full">
+    <%- include('../partials/menu.ejs') %>
+    <%- include('../partials/menu2.ejs') %>
+    <main class="bg-slate-100 flex flex-col gap-4">
+        <section class="w-full h-auto flex flex-col items-center pb-5 pt-28 max-sm:pt-24 bg-neutral-900 overflow-hidden px-4">
+            <div class="flex justify-center md:mb-20 mb-10">
+                <h1 class="md:text-6xl text-3xl font-bold text-customWhite text-center">Parcerias de Sucesso</h1>
+            </div>
+            <section class="w-full md:w-5/6 mx-auto grid md:grid-cols-2 grid-cols-1 gap-4">
+                <a href="#">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-2 pb-8 pt-40 max-w-lg mx-auto mt-6 group transform transition-transform duration-500 hover:scale-105 hover:shadow-xl">
+                        <img src="./images/design_turma_2_card.png" alt="Parceria 1" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-20">
+                        <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-500 group-hover:opacity-10"></div>
+                        <div class="relative z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <h3 class="mt-3 text-3xl font-bold text-customWhite">Parceria 1</h3>
+                            <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite">Descrição da Parceria 1</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-2 pb-8 pt-40 max-w-lg mx-auto mt-6 group transform transition-transform duration-500 hover:scale-105 hover:shadow-xl">
+                        <img src="./images/design_turma_2_card.png" alt="Parceria 2" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-20">
+                        <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-500 group-hover:opacity-10"></div>
+                        <div class="relative z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <h3 class="mt-3 text-3xl font-bold text-customWhite">Parceria 2</h3>
+                            <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite">Descrição da Parceria 2</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-2 pb-8 pt-40 max-w-lg mx-auto mt-6 group transform transition-transform duration-500 hover:scale-105 hover:shadow-xl">
+                        <img src="./images/design_turma_2_card.png" alt="Parceria 3" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-20">
+                        <div class="absolute inset-0 bg-gradient-to-t transition-opacity duration-500 group-hover:opacity-10"></div>
+                        <div class="relative z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <h3 class="mt-3 text-3xl font-bold text-customWhite">Parceria 3</h3>
+                            <p class="gap-y-1 overflow-hidden text-sm leading-6 text-customWhite">Descrição da Parceria 3</p>
+                        </div>
+                    </article>
+                </a>
+            </section>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
