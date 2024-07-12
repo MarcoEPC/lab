@@ -3,17 +3,17 @@
 <body class="flex-1 bg-gray-100">
     <div class="flex h-screen">
         <%- include('../../partials/menuAdmin.ejs') %>
-        <main class="flex-1 flex flex-col h-screen">
+        <main class="flex-1">
             <%- include('../../partials/barra.ejs') %>
-            <div class="flex-1 px-8 py-4 overflow-y-auto">
+            <div class="px-8 py-4">
                 <div class="flex bg-neutral-100 mb-4 p-4 rounded-lg shadow">
                     <span class="font-bold uppercase text-indigo-600 text-sm">
                         <a href="/admin/bolsas">Bolsas</a>
                     </span>
                     <span class="font-serif text-gray-400 text-sm ml-2">| Inserir</span>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md h-full">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full overflow-y-auto">
+                <form action="" method="post" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <!-- Form fields as before -->
                             <div class="mb-4">
@@ -71,11 +71,11 @@
                                 <label for="imagem" class="text-neutral-500 py-2 text-sm">Imagem</label>
                                 <div class="flex items-center justify-center w-full">
                                     <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-32 group text-center">
-                                        <div class="h-full w-full text-center flex flex-col items-center justify-center items-center">
+                                        <div class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
                                             <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
                                                 <img id="imagePreview" class="hidden w-full h-full object-cover">
                                             </div>
-                                            <p class="pointer-none text-gray-500"><span class="text-sm">Arraste ou clique para selecionar um arquivo</span></p>
+                                            <p class="pointer-none text-gray-500 "><span class="text-sm">Arraste ou clique para selecionar um arquivo</span></p>
                                         </div>
                                         <input type="file" name="imagem" id="imagem" class="hidden">
                                     </label>
@@ -91,7 +91,6 @@
         </main>
     </div>
     <%- include('../../partials/footerAdmin.ejs') %>
-
     <script>
         document.getElementById('imagem').addEventListener('change', function(event) {
             const file = event.target.files[0];
@@ -106,4 +105,5 @@
             }
         });
     </script>
-</body>
+
+
