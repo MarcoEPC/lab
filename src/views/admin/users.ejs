@@ -1,152 +1,61 @@
 <%- include('../../partials/header.ejs') %>
 
-<body class="flex-1">
+<body class="flex-1 bg-gray-50">
     <div class="flex h-screen">
         <%- include('../../partials/menuAdmin.ejs') %>
-        <main class="flex-1 flex flex-col">
+        <main class="flex-1 flex flex-col ml-60"> 
             <%- include('../../partials/barra.ejs') %>
-            <div class="flex-1 px-4 py-2">
-                <div class="flex bg-neutral-100 mb-4 p-2 shadow">
+            <div class="flex-1 px-6 py-4">
+                <div class="flex bg-neutral-100 mb-4 p-4 shadow rounded-lg">
                     <span class="font-bold uppercase text-gray-500 text-sm">Utilizadores</span>
-                    <span class="font-serif text-gray-400 text-sm"> &nbsp; | Gestão </span>
+                    <span class="font-serif text-gray-400 text-sm">&nbsp; | Gestão </span>
                 </div>
                 <div class="flex md:justify-end justify-start mb-6">
-                    <button id="openCreateUserModal"
-                        class="px-2 py-2 w-32 text-center bg-indigo-800 rounded shadow text-neutral-200 hover:bg-indigo-600 text-sm font-bold cursor-pointer">Novo
-                        Utilizador
-                    </button>
+                    <button id="openCreateUserModal" class="px-2 py-2 w-32 text-center bg-indigo-800 rounded shadow text-neutral-200 hover:bg-indigo-600 text-sm font-bold cursor-pointer">Novo Utilizador</button>
                 </div>
-                <table class="w-full shadow">
-                    <thead>
-                        <tr class="bg-indigo-600 text-neutral-200">
-                            <th class="p-1 text-sm rounded-ss-lg border-r-2">ID</th>
-                            <th class="p-1 text-sm border-r-2">Nome</th>
-                            <th class="p-1 text-sm border-r-2">Email</th>
-                            <th class="p-1 text-sm border-r-2">Criado em</th>
-                            <th class="p-1 text-indigo-800 text-sm bg-indigo-100 rounded-tr-lg">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="hover:bg-neutral-200">
-                            <td class="p-1 border-b border-blue-gray-50 text-sm">1</td>
-                            <td class="p-1 border-b border-blue-gray-50 text-sm">Marco</td>
-                            <td class="p-1 border-b border-blue-gray-50 text-sm">marcosilva@epcarvalhais.org</td>
-                            <td class="p-1 border-b border-blue-gray-50 text-sm">27/05/2024</td>
-                            <td class="p-1 flex justify-center border-b border-blue-gray-50">
-                                <button id="openEditPassModal" title="Alterar Palavra-passe" class="px-1"><span
-                                        class="material-symbols-outlined text-white bg-indigo-800 hover:bg-indigo-500 rounded p-0.5 shadow">
-                                        password
-                                    </span></button>
-                                <button id="openEditUserModal" title="Editar" class="px-1"><span
-                                        class="material-symbols-outlined text-white bg-orange-600 hover:bg-orange-400 rounded p-0.5 shadow">
-                                        edit
-                                    </span></button>
-                                <button id="openDeleteUserModal" class="px-1"><span
-                                        class="material-symbols-outlined text-white bg-red-600 hover:bg-red-400 rounded p-0.5 shadow">
-                                        delete
-                                    </span></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="relative overflow-x-auto shadow-md rounded-lg max-h-96">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-indigo-600 text-neutral-200 sticky top-0">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">ID</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Email</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Posição</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-100 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">1</td>
+                                <td class="px-6 py-4 whitespace-nowrap flex items-center text-sm">
+                                    <img class="h-8 w-8 rounded-full object-cover mr-2" src="path_to_image" alt="Profile">
+                                    <p>Marco Silva</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">marcosilva@epcarvalhais.org</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">Front-end developer</td>
+                                <td class="px-6 py-4 whitespace-nowrap flex space-x-2">
+                                    <button id="openEditUserModal" title="Editar" class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-500 text-xs font-semibold">
+                                        Edit user
+                                    </button>
+                                    <button id="openDeleteUserModal" class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-500 text-xs font-semibold">
+                                        Delete user
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </main>
     </div>
-    <div id="myModal"
-        class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="myModal" class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-lg shadow-lg w-1/2 p-6 relative">
-            <span id="closeModal"
-                class="absolute top-0 right-0 mt-4 mr-4 bg-slate-400 p-2 text-gray-500 cursor-pointer">&times;</span>
+            <span id="closeModal" class="absolute top-0 right-0 mt-4 mr-4 bg-slate-400 p-2 text-gray-500 cursor-pointer">&times;</span>
             <h2 id="modalTitle" class="text-2xl mb-4">Title</h2>
             <div id="modalContent">Content goes here</div>
         </div>
     </div>
-    <script>
-        const modals = {
-            openCreateUserModal: {
-                title: "Novo Utilizador",
-                content: `
-                    <form action="/admin/createuser" method="post" class="space-y-4">
-                        <div>
-                            <label for="nome" class="block text-sm font-medium text-gray-700">Nome</label>
-                            <input type="text" name="nome" id="nome" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" name="email" id="email" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
-                            <input type="password" name="password" id="password" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div class="flex justify-end">
-                            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500">Criar</button>
-                        </div>
-                    </form>`
-            },
-            openEditPassModal: {
-                title: "Alterar Palavra-passe",
-                content: `
-                    <form action="/admin/editPass" method="post" class="space-y-4">
-                        <div>
-                            <label for="current_password" class="block text-sm font-medium text-gray-700">Senha Atual</label>
-                            <input type="password" name="current_password" id="current_password" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="new_password" class="block text-sm font-medium text-gray-700">Nova Senha</label>
-                            <input type="password" name="new_password" id="new_password" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirmar Nova Senha</label>
-                            <input type="password" name="confirm_password" id="confirm_password" required class="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div class="flex justify-end">
-                            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500">Alterar Senha</button>
-                        </div>
-                    </form>`
-            },
-            openEditUserModal: {
-                title: "Editar Utilizador",
-                content: "Formulário para editar utilizador vai aqui."
-            },
-            openDeleteUserModal: {
-                title: "Eliminar Utilizador",
-                content: "Tem certeza de que deseja eliminar este utilizador?"
-            }
-        };
-
-        const openModalButtons = document.querySelectorAll('[id^="open"]');
-        const closeModalButton = document.getElementById('closeModal');
-        const modal = document.getElementById('myModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalContent = document.getElementById('modalContent');
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modalData = modals[button.id];
-                if (modalData) {
-                    modalTitle.innerHTML = modalData.title;
-                    modalContent.innerHTML = modalData.content;
-                    modal.classList.remove('opacity-0', 'pointer-events-none');
-                    modal.classList.add('opacity-100');
-                }
-            });
-        });
-
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('pointer-events-none');
-            }, 300); 
-        }
-
-        closeModalButton.addEventListener('click', closeModal);
-
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-    </script>
+    
     <%- include('../../partials/footerAdmin.ejs') %>
 </body>
