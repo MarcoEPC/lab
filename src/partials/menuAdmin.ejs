@@ -1,54 +1,11 @@
-<aside class="transition-width duration-200 w-60 bg-neutral-900 text-white flex flex-col min-h-screen shadow-md fixed top-0 left-0 h-full"
-    id="menu">
-    <div class="py-4 pl-4 flex">
-        <!--<img src="/images/logo.png" alt="Logotipo EPC" class="w-8">-->
-        <a href="dashboard"
-            class="shadow-lg rounded-lg p-2 font-bold text-xl text-neutral-300 hover:text-neutral-400">EpcLab</a>
-    </div>
-    <ul class="flex-1 pl-2 overflow-hidden">
-        <li>
-            <h1 class="font-bold text-sm uppercase text-gray-100 pb-1">Utilizadores</h1>
-        </li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                person_add
-            </span><a href="/admin/createUser" class="p-1 text-sm">Inserir Utilizador</a></li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                manage_Accounts
-            </span><a href="/admin/users" class="p-1 text-sm block">Gestão Utilizadores</a></li>
-        <li>
-            <h1 class="font-bold text-sm uppercase text-gray-100 pt-3 pb-1">Bolsas</h1>
-        </li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                school
-            </span><a href="/admin/createBolsa" class="p-1 text-sm block">Inserir Bolsa</a></li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                work
-            </span><a href="/admin/bolsas" class="p-1 text-sm block">Gestão Bolsas</a></li>
-        <li>
-            <h1 class="font-bold text-sm uppercase text-gray-100 pt-3 pb-1">Projetos</h1>
-        </li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                movie
-            </span><a href="/admin/createProjeto" class="p-1 text-sm block">Inserir Projeto</a></li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                movie_edit
-            </span><a href="/admin/projetos" class="p-1 text-sm block">Gestão Projetos</a></li>
-        <li>
-            <h1 class="font-bold text-sm uppercase text-gray-100 pt-3 pb-1">Parceiros</h1>
-        </li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                add_business
-            </span><a href="/admin/createParceiro" class="p-1 text-sm block">Inserir Parceiro</a></li>
-        <li class="text-gray-100 p-1 flex items-center hover:bg-indigo-600 rounded-lg"><span
-                class="material-symbols-outlined p-1">
-                store
-            </span><a href="/admin/parceiros" class="p-1 text-sm block">Gestão Parceiros</a></li>
-    </ul>
+<aside class="w-64 bg-gray-800 text-white flex flex-col">
+    <nav class="flex-1 p-4">
+      <ul>
+        <li><a href="/admin/users" class="block py-2 px-4 hover:bg-gray-700">Utilizador</a></li>
+        <li><a href="/admin/bolsas" class="block py-2 px-4 hover:bg-gray-700">Bolsas</a></li>
+        <li><a href="/admin/projetos" class="block py-2 px-4 hover:bg-gray-700">Projetos</a></li>
+        <li><a href="/admin/parceiros" class="block py-2 px-4 hover:bg-gray-700">Parceiros</a></li>
+      </ul>
+    </nav>
 </aside>
+  

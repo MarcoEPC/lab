@@ -7,6 +7,8 @@ module.exports = {
         customBlue: '#00A3E3',
         customWhite: '#fefcfd',
         customBlack: '#333333',
+      
+
       },
       
     },

@@ -1,25 +1,28 @@
 <%- include('../../partials/header.ejs') %>
-
-    <body class="flex-1">
-        <div class="flex h-full">
-            <%- include('../../partials/menuAdmin.ejs') %>
-                <main class="flex-1">
-                    <%- include('../../partials/barra.ejs') %>
-                        <div class="p-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-                            <div class="p-4 bg-indigo-500 h-36 text-xl font-bold uppercase font-serif">Utilizadores
-                            </div>
-                            <div class="p-4 bg-indigo-400 h-36 text-xl font-bold uppercase font-serif">Bolsas</div>
-                            <div class="p-4 bg-indigo-300 h-36 text-xl font-bold uppercase font-serif">Projetos</div>
-                            <div class="p-4 bg-indigo-200 h-36 text-xl font-bold uppercase font-serif">Parceiros</div>
-
-                        </div>
-                        <div class="p-2 grid md:grid-cols-1 lg:grid-cols-2 gap-2">
-                            <div class="p-4 bg-red-500 h-48 text-6xl">01</div>
-                            <div class="p-4 bg-amber-700 h-48 text-6xl">02</div>
-                            <div class="p-4 bg-fuchsia-700 h-48 text-6xl">03</div>
-                            <div class="p-4 bg-pink-700 h-48 text-6xl">04</div>
-                        </div>
-
-                </main>
-        </div>
-        <%- include('../../partials/footerAdmin.ejs') %>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <%- include('../../partials/menuAdmin.ejs') %>
+        <div class="flex flex-1">
+        <%- include('../../partials/barra.ejs') %>
+        <main class="flex-1 p-6">
+          <section>
+            <h2 class="text-2xl font-bold mb-4">Home Dashboard</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Bolsas Ativas</h3>
+                <p class="text-2xl">10</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Candidatos</h3>
+                <p class="text-2xl">150</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Projetos Recentes</h3>
+                <p class="text-2xl">5</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>  
+<%- include('../../partials/footerAdmin.ejs') %>
